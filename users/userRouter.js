@@ -105,7 +105,6 @@ router.put("/:id", (req, res) => {
 //custom middleware
 
 function validateUserId(req, res, next) {
-  console.log(req.body, req.params.id);
   if (req.body.user_id == req.params.id) {
     req.user = req.body;
     next();
